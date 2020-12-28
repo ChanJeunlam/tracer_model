@@ -1,0 +1,31 @@
+#!/bin/bash
+#---------------------
+# MEAN FORCING
+# bsub < run_meanforc_par
+#---------------------
+#BSUB -J meanforc_TI_TO
+#BSUB -W 6:20
+#BSUB -o FOC%J.out
+#BSUB -e FOC%J.err
+#BSUB -n 16                        # Request * cores
+#BSUB -R span[ptile=16]            # Request * cores per node
+#BUSB -R "rusage[mem=25000]"       # Request *MB per core
+#BSUB -q parallel
+#BSUB -P ome
+#BSUB -u 
+#BSUB -B
+#BSUB -N
+#BSUB -x
+#
+set echo
+# 
+# Start time
+date
+#setenv OMP_NUM_THREADS 16
+export D=/nethome/yxl1496/hycom/GS_HR/filter
+# 
+cd $D 
+# Run
+./mfoc_TI_TO 
+# End time
+date
