@@ -32,9 +32,9 @@ c
       allocate (pad(npad))
       inquire(iolength=nrecl)var1,pad ! what's this for?????
 c
-      grd_path = '/nethome/ikamenkovich/hycom/GS_HR/'
-      atl_path = '/projects2/rsmas/ikamenkovich/Atlantic_HR/'
-      sav_path = '/projects2/rsmas/ikamenkovich/yxl1496/GSH_OUTPUT/'
+      grd_path = 'MODEL_GRID_PATH'
+      atl_path = 'MODEL_FORCING_PATH'
+      sav_path = 'OUTPUT_PATH'
 
 c=====================================================================
 c     Read topography (fid = 31) and apply land mask
