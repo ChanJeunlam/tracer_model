@@ -44,10 +44,9 @@ c
       allocate (pad(npad))
       inquire(iolength=nrecl)var,pad
 c
-      grd_path = '/nethome/yxl1496/hycom/GS_HR/'
-c     grd_path = '/scratch/projects/ome/hra_expt/'
-      foc_path = '/scratch/projects/ome/hra_expt/UVDP/'
-      sav_path = '/scratch/projects/ome/hra_expt/UVDP_CS/'
+      grd_path = 'MODEL_GRID_PATH'
+      atl_path = 'MODEL_FORCING_PATH'
+      sav_path = 'OUTPUT_PATH'
 c
       lp = 6
       days = daysSh
